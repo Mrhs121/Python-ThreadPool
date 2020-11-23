@@ -36,7 +36,7 @@ class ThreadPool(object):
 
 def download(url, dirname):
     pass
-def demo(a,b,c,d)
+def demo(a,b,c,d):
     print(threading.currentThread().getName(),a+b+c+d)
 
 pool = ThreadPool(max_workers=8)
