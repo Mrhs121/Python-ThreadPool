@@ -36,11 +36,13 @@ class ThreadPool(object):
 
 def download(url, dirname):
     pass
-
+def demo(a,b,c,d)
+    print(threading.currentThread().getName(),a+b+c+d)
 
 pool = ThreadPool(max_workers=8)
 pool.start()
 urls = [...........] # 例如可以是需要爬的所有页面的url、或者所有需要下载文件的链接等等
 for url in urls:
-  pool.submit(partial(download, url, dirname))
+#   pool.submit(partial(download, url, dirname))
+    pool.submit(partial(demo,1,2,3,4))
 pool.stop()
