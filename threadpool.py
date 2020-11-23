@@ -35,17 +35,7 @@ class ThreadPool(object):
 
 
 def download(url, dirname):
-    r = requests.get(url)
-    if r.status_code == 200:
-        folder = os.path.exists("./download/" + dirname)
-        if not folder:
-            os.makedirs("./download/" + dirname)
-        print("下载 " + url)
-        with open("./download/" + dirname + '/' + url.split("/")[-1], "wb") as code:
-            code.write(r.content)
-        return 0
-    else:
-        return -1
+    pass
 
 
 pool = ThreadPool(max_workers=8)
